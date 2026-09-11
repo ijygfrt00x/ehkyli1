@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>احكيلي | حكايات من الكتاب المقدس</title>
+
+<meta name="description"
+content="احكيلي — حكايات من الكتاب المقدس بأسلوب بسيط وقريب للقلب، مع شخصيات وقصص وتأملات تساعدك تشوف حياتك من زاوية مختلفة.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0b0d;
+    --bg2:#111114;
+    --card:#17171b;
+    --card2:#1d1d22;
+    --gold:#d9ad61;
+    --gold2:#f0cf91;
+    --text:#f5f1e9;
+    --muted:#aaa5a0;
+    --line:rgba(217,173,97,.18);
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:
+        radial-gradient(circle at 50% -10%,rgba(217,173,97,.13),transparent 35%),
+        var(--bg);
+    color:var(--text);
+    line-height:1.8;
+    min-height:100vh;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(11,11,13,.88);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.cross{
+    width:40px;
+    height:40px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--line);
+    border-radius:12px;
+    color:var(--gold2);
+    background:rgba(217,173,97,.06);
+    font-size:21px;
+}
+
+.brandText strong{
+    display:block;
+    font-size:20px;
+    line-height:1.2;
+}
+
+.brandText span{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:rgba(217,173,97,.08);
+    filter:blur(80px);
+    top:-220px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.heroContent{
+    max-width:850px;
+    position:relative;
+    z-index:1;
+}
+
+.heroCross{
+    color:var(--gold);
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-family:"Playfair Display","Cairo",serif;
+    font-size:clamp(54px,9vw,92px);
+    line-height:1;
+    margin-bottom:15px;
+    letter-spacing:-2px;
+}
+
+.heroSubtitle{
+    color:var(--gold2);
+    font-size:clamp(19px,3vw,27px);
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.heroText{
+    color:var(--muted);
+    max-width:650px;
+    margin:0 auto 35px;
+    font-size:16px;
+}
+
+.heroButton{
+    border:1px solid var(--gold);
+    background:linear-gradient(135deg,#d9ad61,#a97b38);
+    color:#17110a;
+    font-weight:800;
+    border-radius:14px;
+    padding:13px 25px;
+    transition:.25s;
+}
+
+.heroButton:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(217,173,97,.18);
+}
+
+/* ================= GENERAL ================= */
+
+.container{
+    width:min(1150px,calc(100% - 30px));
+    margin:auto;
+}
+
+.section{
+    padding:70px 0;
+}
+
+.sectionTitle{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.sectionTitle .mini{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.sectionTitle h2{
+    font-size:30px;
+    margin-bottom:7px;
+}
+
+.sectionTitle p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= FEELINGS ================= */
+
+.feelings{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.feeling{
+    background:linear-gradient(145deg,var(--card),#111114);
+    border:1px solid var(--line);
+    border-radius:17px;
+    padding:18px 12px;
+    text-align:center;
+    color:var(--text);
+    transition:.25s;
+}
+
+.feeling:hover{
+    transform:translateY(-4px);
+    border-color:rgba(217,173,97,.5);
+}
+
+.feeling .emoji{
+    font-size:27px;
+    display:block;
+    margin-bottom:5px;
+}
+
+.feeling span{
+    font-size:13px;
+}
+
+/* ================= SEARCH ================= */
+
+.searchBox{
+    max-width:700px;
+    margin:0 auto 35px;
+    position:relative;
+}
+
+.searchBox input{
+    width:100%;
+    padding:17px 20px;
+    border-radius:15px;
+    border:1px solid var(--line);
+    background:#151519;
+    color:var(--text);
+    outline:none;
+    font-size:15px;
+    transition:.2s;
+}
+
+.searchBox input:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 4px rgba(217,173,97,.07);
+}
+
+.searchBox input::placeholder{
+    color:#777;
+}
+
+/* ================= FILTERS ================= */
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:35px;
+}
+
+.filter{
+    border:1px solid var(--line);
+    background:#151519;
+    color:var(--muted);
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:12px;
+    transition:.2s;
+}
+
+.filter.active,
+.filter:hover{
+    background:rgba(217,173,97,.12);
+    color:var(--gold2);
+    border-color:rgba(217,173,97,.45);
+}
+
+/* ================= CHARACTERS ================= */
+
+.characters{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.character{
+    position:relative;
+    background:
+        linear-gradient(145deg,rgba(217,173,97,.055),transparent 45%),
+        var(--card);
+    border:1px solid var(--line);
+    border-radius:19px;
+    padding:21px;
+    min-height:215px;
+    overflow:hidden;
+    transition:.28s;
+    cursor:pointer;
+}
+
+.character:hover{
+    transform:translateY(-5px);
+    border-color:rgba(217,173,97,.45);
+    box-shadow:var(--shadow);
+}
+
+.characterNumber{
+    position:absolute;
+    left:14px;
+    top:12px;
+    font-size:11px;
+    color:#65605b;
+}
+
+.characterIcon{
+    width:45px;
+    height:45px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    background:rgba(217,173,97,.09);
+    border:1px solid var(--line);
+    color:var(--gold2);
+    font-size:22px;
+    margin-bottom:16px;
+}
+
+.character h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.hook{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.8;
+}
+
+.readMore{
+    display:inline-block;
+    margin-top:13px;
+    color:var(--gold2);
+    font-size:12px;
+    font-weight:700;
+}
+
+/* ================= ANSWERS ================= */
+
+.answers{
+    background:
+        radial-gradient(circle at 50% 0,rgba(217,173,97,.09),transparent 40%),
+        #101013;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.answerTable{
+    border:1px solid var(--line);
+    border-radius:20px;
+    overflow:hidden;
+    background:#141418;
+    box-shadow:var(--shadow);
+}
+
+.answerRow{
+    display:grid;
+    grid-template-columns:35% 65%;
+    border-bottom:1px solid rgba(255,255,255,.055);
+    transition:.2s;
+}
+
+.answerRow:last-child{
+    border-bottom:0;
+}
+
+.answerRow:hover{
+    background:rgba(217,173,97,.035);
+}
+
+.answerTopic{
+    padding:18px 20px;
+    font-weight:700;
+    color:var(--gold2);
+    border-left:1px solid rgba(255,255,255,.055);
+}
+
+.answerStories{
+    padding:18px 20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+}
+
+.storyTag{
+    border:1px solid var(--line);
+    background:#1a1a1f;
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:12px;
+    color:#ddd5c9;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.storyTag:hover{
+    color:var(--gold2);
+    border-color:var(--gold);
+}
+
+/* ================= QUOTE ================= */
+
+.quote{
+    text-align:center;
+    padding:90px 20px;
+}
+
+.quoteIcon{
+    font-size:30px;
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.quote h2{
+    font-family:"Playfair Display","Cairo",serif;
+    font-size:clamp(25px,5vw,40px);
+    max-width:800px;
+    margin:auto;
+}
+
+.quote p{
+    color:var(--muted);
+    margin-top:15px;
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid var(--line);
+    padding:35px 20px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+}
+
+.footerBrand{
+    color:var(--gold2);
+    font-weight:800;
+    font-size:17px;
+    margin-bottom:5px;
+}
+.developer-credit{
+
+    text-align:center;
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid var(--line);
+    font-family:"Cinzel", serif;
+    font-size:clamp(24px,5vw,40px);
+    font-weight:700;
+    letter-spacing:3px;
+    color:var(--gold2);
+    text-transform:uppercase;
+}
+
+.developer-credit span{
+    color:var(--gold);
+    letter-spacing:5px;
+}
+/* ================= MODAL ================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(8px);
+    z-index:100;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modalBox{
+    width:min(850px,100%);
+    max-height:92vh;
+    overflow-y:auto;
+    background:
+        radial-gradient(circle at 50% 0,rgba(217,173,97,.08),transparent 30%),
+        #151519;
+    border:1px solid var(--line);
+    border-radius:23px;
+    box-shadow:0 30px 100px rgba(0,0,0,.7);
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    left:17px;
+    top:15px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:#202025;
+    color:#ddd;
+    font-size:20px;
+}
+
+.modalContent{
+    padding:45px 30px 35px;
+}
+
+.modalNumber{
+    color:var(--gold);
+    font-size:12px;
+    margin-bottom:5px;
+}
+
+.modalTitle{
+    font-family:"Playfair Display","Cairo",serif;
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.modalHook{
+    color:var(--gold2);
+    font-size:17px;
+    font-weight:700;
+    padding:16px;
+    border-right:3px solid var(--gold);
+    background:rgba(217,173,97,.045);
+    border-radius:7px;
+    margin-bottom:25px;
+}
+
+.storyText p{
+    color:#d2cec7;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+.reflection{
+    margin:30px 0;
+    padding:22px;
+    border-radius:17px;
+    background:rgba(217,173,97,.06);
+    border:1px solid var(--line);
+}
+
+.reflection h4{
+    color:var(--gold2);
+    margin-bottom:8px;
+}
+
+.reflection p{
+    color:#d5d0c8;
+    font-size:14px;
+}
+
+.question{
+    margin:25px 0;
+    padding:20px;
+    border-radius:17px;
+    background:#101014;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.question h4{
+    margin-bottom:12px;
+    color:#eee;
+}
+
+.options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.option{
+    border:1px solid var(--line);
+    background:#19191d;
+    color:#bbb;
+    border-radius:12px;
+    padding:8px 12px;
+    font-size:12px;
+    transition:.2s;
+}
+
+.option:hover,
+.option.selected{
+    color:var(--gold2);
+    border-color:var(--gold);
+    background:rgba(217,173,97,.08);
+}
+
+.lesson{
+    padding:22px;
+    border-radius:17px;
+    background:linear-gradient(135deg,rgba(217,173,97,.1),rgba(217,173,97,.025));
+    border:1px solid var(--line);
+}
+
+.lesson h4{
+    color:var(--gold2);
+    margin-bottom:8px;
+}
+
+.lesson p{
+    color:#ddd6cc;
+    font-size:14px;
+}
+
+.reference{
+    margin-top:22px;
+    color:#8e8983;
+    font-size:12px;
+}
+
+.reference strong{
+    color:var(--gold2);
+}
+
+/* ================= EMPTY ================= */
+
+.empty{
+    text-align:center;
+    color:#777;
+    padding:50px 10px;
+    display:none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+    .characters{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .feelings{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+
+@media(max-width:650px){
+    .hero{
+        min-height:560px;
+        padding-top:60px;
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .feelings{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .characters{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .character{
+        padding:17px;
+        min-height:200px;
+    }
+
+    .character h3{
+        font-size:18px;
+    }
+
+    .answerRow{
+        grid-template-columns:1fr;
+    }
+
+    .answerTopic{
+        border-left:0;
+        border-bottom:1px solid rgba(255,255,255,.055);
+    }
+
+    .modalContent{
+        padding:42px 20px 25px;
+    }
+
+    .modalTitle{
+        font-size:31px;
+    }
+}
+
+@media(max-width:400px){
+    .characters{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="nav">
+        <a href="#" class="brand">
+            <div class="cross">✝</div>
+            <div class="brandText">
+                <strong>احكيلي</strong>
+                <span>حكايات من الكتاب المقدس</span>
+            </div>
+        </a>
+
+        <a href="#characters" class="readMore">الشخصيات ←</a>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="heroContent">
+
+        <div class="heroCross">✝</div>
+
+        <h1>احكيلي</h1>
+
+        <div class="heroSubtitle">
+            حكايات من الكتاب المقدس
+        </div>
+
+        <p class="heroText">
+            قصص ناس حقيقية عاشوا الخوف والفرح والسقوط والنجاح
+            وشافوا إيد ربنا في وسط كل ده.
+            يمكن قصتك أنت كمان تلاقي جزء منها هنا.
+        </p>
+
+        <a href="#characters" class="heroButton">
+            ابدأ الرحلة
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEELINGS ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="sectionTitle">
+            <div class="mini">يمكن القصة تبدأ من إحساسك</div>
+            <h2>إنت حاسس بإيه؟</h2>
+            <p>اختار الإحساس الأقرب ليك</p>
+        </div>
+
+        <div class="feelings">
+
+            <button class="feeling" onclick="filterByTopic('الأمل')">
+                <span class="emoji">😔</span>
+                محتاج أمل
+            </button>
+
+            <button class="feeling" onclick="filterByTopic('الخوف')">
+                <span class="emoji">😰</span>
+                خايف
+            </button>
+
+            <button class="feeling" onclick="filterByTopic('الضيقة')">
+                <span class="emoji">💔</span>
+                متوجع
+            </button>
+
+            <button class="feeling" onclick="filterByTopic('الغضب')">
+                <span class="emoji">😡</span>
+                متضايق
+            </button>
+
+            <button class="feeling" onclick="filterByTopic('التوهان')">
+                <span class="emoji">🧭</span>
+                تايه
+            </button>
+
+            <button class="feeling" onclick="filterByTopic('الشجاعة')">
+                <span class="emoji">💪</span>
+                محتاج شجاعة
+            </button>
+
+            <button class="feeling" onclick="filterByTopic('ربنا')">
+                <span class="emoji">🙏</span>
+                عايز أقرب من ربنا
+            </button>
+
+            <button class="feeling" onclick="document.getElementById('characters').scrollIntoView()">
+                <span class="emoji">👀</span>
+                عايز أفهم شخصية
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CHARACTERS ================= -->
+
+<section class="section" id="characters">
+
+    <div class="container">
+
+        <div class="sectionTitle">
+            <div class="mini">العهد القديم</div>
+            <h2>شخصيات العهد القديم</h2>
+            <p>
+                38 شخصية — وكل شخصية وراها حكاية تستاهل تتسمع
+            </p>
+        </div>
+
+        <div class="searchBox">
+            <input
+                type="search"
+                id="search"
+                placeholder="ابحث عن شخصية... مثال: يوسف، داود، موسى"
+                oninput="searchStories()"
+            >
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active" onclick="setFilter('الكل',this)">
+                الكل
+            </button>
+
+            <button class="filter" onclick="setFilter('آباء',this)">
+                الآباء
+            </button>
+
+            <button class="filter" onclick="setFilter('قادة',this)">
+                قادة
+            </button>
+
+            <button class="filter" onclick="setFilter('ملوك',this)">
+                ملوك
+            </button>
+
+            <button class="filter" onclick="setFilter('أنبياء',this)">
+                أنبياء
+            </button>
+
+            <button class="filter" onclick="setFilter('نساء',this)">
+                شخصيات نسائية
+            </button>
+
+        </div>
+
+        <div class="characters" id="charactersGrid"></div>
+
+        <div class="empty" id="empty">
+            مفيش شخصية بالاسم ده دلوقتي.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ANSWERS ================= -->
+
+<section class="section answers">
+
+    <div class="container">
+
+        <div class="sectionTitle">
+            <div class="mini">يمكن أنت مش بتدور على اسم...</div>
+            <h2>🕯️ لو بتدور على إجابة</h2>
+            <p>
+                اختار الحاجة اللي شاغلاك، وإحنا نوصلك للقصة المناسبة.
+            </p>
+        </div>
+
+        <div class="answerTable">
+
+            <div class="answerRow">
+                <div class="answerTopic">⏳ الصبر</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يوسف')">يوسف</button>
+                    <button class="storyTag" onclick="openByName('أيوب')">أيوب</button>
+                        </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">🎁 العطايا وبركات ربنا</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يعقوب')">يعقوب</button>
+                    <button class="storyTag" onclick="openByName('يوسف')">يوسف</button>
+                    <button class="storyTag" onclick="openByName('سليمان')">سليمان</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">❤️ المحبة</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يوسف')">يوسف</button>
+                    <button class="storyTag" onclick="openByName('راعوث')">راعوث</button>
+                    <button class="storyTag" onclick="openByName('يوناثان')">يوناثان</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">✝️ لما أحس إن ربنا بعيد</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يوسف')">يوسف</button>
+                    <button class="storyTag" onclick="openByName('دانيال')">دانيال</button>
+                    <button class="storyTag" onclick="openByName('إيليا')">إيليا</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">👿 لما أواجه الشر</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('أيوب')">أيوب</button>
+                    <button class="storyTag" onclick="openByName('دانيال')">دانيال</button>
+                    <button class="storyTag" onclick="openByName('إيليا')">إيليا</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">👂 لما أحتاج أعرف إن ربنا بيسمعني</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('حنة')">حنة</button>
+                    <button class="storyTag" onclick="openByName('داود')">داود</button>
+                    <button class="storyTag" onclick="openByName('يونان')">يونان</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">🌧️ لما أكون في ضيقة</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يوسف')">يوسف</button>
+                    <button class="storyTag" onclick="openByName('موسى')">موسى</button>
+                    <button class="storyTag" onclick="openByName('دانيال')">دانيال</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">😨 الخوف</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('موسى')">موسى</button>
+                    <button class="storyTag" onclick="openByName('يشوع')">يشوع</button>
+                    <button class="storyTag" onclick="openByName('داود')">داود</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">💔 لما أحس إني مرفوض</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يوسف')">يوسف</button>
+                    <button class="storyTag" onclick="openByName('داود')">داود</button>
+                    <button class="storyTag" onclick="openByName('موسى')">موسى</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">🛤️ لما أهرب من حاجة</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('يونان')">يونان</button>
+                    <button class="storyTag" onclick="openByName('موسى')">موسى</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">💪 الشجاعة وقت الخوف</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('داود')">داود</button>
+                    <button class="storyTag" onclick="openByName('دانيال')">دانيال</button>
+                    <button class="storyTag" onclick="openByName('جدعون')">جدعون</button>
+                </div>
+            </div>
+
+            <div class="answerRow">
+                <div class="answerTopic">🔄 الفشل والبداية من جديد</div>
+                <div class="answerStories">
+                    <button class="storyTag" onclick="openByName('داود')">داود</button>
+                    <button class="storyTag" onclick="openByName('موسى')">موسى</button>
+                    <button class="storyTag" onclick="openByName('يونان')">يونان</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote">
+
+    <div class="quoteIcon">✝</div>
+
+    <h2>
+        يمكن القصة اللي بتدور عليها...
+        مستنياك من زمان.
+    </h2>
+
+    <p>
+        اقرأ، فكر، واسأل نفسك: لو كنت مكانه... كنت هتعمل إيه؟
+    </p>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footerBrand">
+        احكيلي
+    </div>
+
+    <div>
+        حكايات من الكتاب المقدس
+    </div>
+
+    <div style="margin-top:8px;">
+        النصوص المعروضة هنا سرد مبسط للأحداث،
+        ويمكنك الرجوع للمراجع الكتابية لقراءة النص الأصلي.
+    </div>
+    <div class="developer-credit">
+    DEVELOPED BY <span>NaDeR</span>
+
+</footer>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="storyModal" onclick="outsideClose(event)">
+
+    <div class="modalBox">
+
+        <button class="close" onclick="closeStory()">×</button>
+
+        <div class="modalContent">
+
+            <div class="modalNumber" id="modalNumber"></div>
+
+            <h2 class="modalTitle" id="modalTitle"></h2>
+
+            <div class="modalHook" id="modalHook"></div>
+
+            <div class="storyText" id="modalStory"></div>
+
+            <div class="reflection">
+
+                <h4>🕯️ وقف هنا شوية</h4>
+
+                <p id="modalReflection"></p>
+
+            </div>
+
+            <div class="question">
+
+                <h4>لو كنت مكانه... كنت هتعمل إيه؟</h4>
+
+                <div class="options">
+
+                    <button class="option" onclick="selectOption(this)">
+                        أواجه
+                    </button>
+
+                    <button class="option" onclick="selectOption(this)">
+                        أهرب
+                    </button>
+
+                    <button class="option" onclick="selectOption(this)">
+                        أستنى
+                    </button>
+
+                    <button class="option" onclick="selectOption(this)">
+                        أصلي وأطلب إرشاد
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="lesson">
+
+                <h4>💡 المغزى</h4>
+
+                <p id="modalLesson"></p>
+
+            </div>
+
+            <div class="reference">
+                📖 اقرأ القصة في الكتاب المقدس:
+                <strong id="modalReference"></strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   DATABASE
+   ========================================================= */
+
+const stories = [
+
+{
+name:"يعقوب",
+icon:"🧔",
+category:"آباء",
+hook:"هرب من أخوه... ورجع بعد سنين وهو خايف من اللحظة اللي هتقابله فيها.",
+topics:["الخوف","الصبر","الأمل","التوهان"],
+story:[
+"يعقوب عاش جزء كبير من حياته وهو بيحاول ياخد البركة بطريقته. خد البركة من أبوه إسحاق في موقف تسبب في غضب عيسو، واضطر يهرب من البيت.",
+"في الطريق، شاف حلم السلم اللي واصل بين الأرض والسماء، وهناك ربنا طمّنه إنه مش متروك. لكن الطريق نفسه كان طويل، وفيه تعب وشغل وانتظار وعلاقات معقدة.",
+"بعد سنين طويلة، جه الوقت اللي لازم يرجع فيه. المشكلة إن عيسو، أخوه، كان لسه في ذاكرته، ويعقوب كان خايف جدًا من المواجهة. حاول يرتب الأمور ويبعث هدايا قدامه، لكن في النهاية كان لازم يقابل أخوه.",
+"وقبل اللقاء، عاش يعقوب ليلة صعبة جدًا، وفيها حدث صراع غيّر حياته. خرج من الليلة دي وهو متغير، وحصل على اسم جديد: إسرائيل.",
+"لما وصل اللقاء، عيسو جري عليه وحضنه. اللحظة اللي كان يعقوب خايف منها سنين، انتهت بشكل مختلف تمامًا عما كان متوقعًا."
+],
+reflection:"أوقات كتير بنفضل عايشين في خوف من حاجة حصلت زمان، ونبني في دماغنا سيناريوهات أسوأ من الحقيقة. لكن الطريق مع ربنا ممكن يغيّرنا قبل ما يغيّر الظروف.",
+lesson:"يعقوب يعلّمنا إن النضج مش إننا نعيش من غير أخطاء، لكن إننا نسمح لربنا يغيّرنا وإحنا ماشيين معاه.",
+reference:"تكوين 25–33"
+},
+
+{
+name:"عيسو",
+icon:"🏹",
+category:"آباء",
+hook:"خسر حاجة غالية في لحظة غضب... وبعدها عاش مع نتيجة القرار.",
+topics:["الغضب","المسامحة","العائلة"],
+story:[
+"عيسو كان الابن الأكبر لإسحاق، وكان أخوه يعقوب مختلف عنه تمامًا. في لحظة جوع، باع عيسو بكوريته ليعقوب مقابل أكلة.",
+"وبعدها حصل موقف البركة، وفيه خد يعقوب البركة من أبوه بطريقة جعلت عيسو يشعر إن كل شيء اتسرق منه.",
+"غضب عيسو جدًا لدرجة إنه فكر في قتل أخوه، ويعقوب اضطر يهرب بعيدًا. سنين طويلة مرت، وكل واحد عاش حياته بعيد عن الثاني.",
+"لكن بعد سنوات، رجع يعقوب. عيسو كان قدامه فرصة يفضل أسير للغضب القديم، لكنه اختار يجري ناحية أخوه ويحضنه ويبكي معه.",
+"الموقف مش بيمسح اللي حصل، لكنه يورينا إن الإنسان مش لازم يفضل طول عمره أسير لألم قديم."
+],
+reflection:"هل في موقف قديم لسه عايش جواك وكأنه حصل امبارح؟ المسامحة مش معناها إن اللي حصل كان صح، لكنها أحيانًا معناها إنك مش هتخلي اللي حصل يتحكم في باقي حياتك.",
+lesson:"عيسو يورينا قوة المسامحة، وإن الغضب ممكن يبدأ بلحظة لكن الإنسان يقدر يختار نهاية مختلفة.",
+reference:"تكوين 25–33"
+},
+
+{
+name:"راحيل",
+icon:"🌿",
+category:"نساء",
+hook:"حبت يعقوب سنين طويلة... وعاشت مع انتظار وألم كان أكبر من قدرتها.",
+topics:["الصبر","الانتظار","الألم","المحبة"],
+story:[
+"راحيل كانت زوجة يعقوب، والكتاب بيحكي عن محبة يعقوب لها وانتظاره سنين عشان يتزوجها.",
+"لكن حياتها ما كانتش خالية من الألم. كانت شايفة أختها ليئة بتنجب، بينما هي كانت بتعاني من عدم الإنجاب.",
+"في وسط المقارنة والألم، ظهرت مشاعر الغيرة والحزن، وراحيل كانت بتحاول تفهم ليه حياتها مش ماشية زي ما كانت تتمنى.",
+"في النهاية، افتقد الرب راحيل وولدت يوسف، وبعدها ولدت بنيامين، لكن ولادتها لبنيامين كانت مرتبطة بآلام شديدة وانتهت بموتها.",
+"قصة راحيل فيها فرح وألم وانتظار، وبتفكرنا إن حياة الإنسان ممكن تجمع أكتر من شعور في نفس الوقت."
+],
+reflection:"مش كل تأخير معناه إن ربنا ناسيك، ومش كل إجابة بتيجي بالطريقة اللي إحنا متخيلينها.",
+lesson:"قصة راحيل تخلينا نتعامل مع الانتظار كجزء من رحلة الإيمان، مش كدليل على غياب ربنا.",
+reference:"تكوين 29–35"
+},
+
+{
+name:"ليئة",
+icon:"🌸",
+category:"نساء",
+hook:"كانت الزوجة اللي ما أخدتش نفس الحب اللي كانت تتمناه... لكن قصتها ما انتهتش عند رفض شخص ليها.",
+topics:["الرفض","المحبة","القيمة"],
+story:[
+"ليئة دخلت زواجها وهي عارفة إن قلب يعقوب كان متعلق براخيل. الكتاب بيقول إن عيني ليئة كانتا ضعيفتين، بينما راحيل كانت جميلة المنظر وحسنة الصورة.",
+"لكن رغم إن ليئة كانت حاسة إنها مش المحبوبة بنفس الطريقة، ربنا شافها وسمعها. وأنجبت أبناء، ومع كل ابن كانت بتعبّر عن مشاعرها ورغبتها في أن يحبها زوجها.",
+"من وسط الألم، خرجت سبطًا من أسباط إسرائيل، ومن نسلها جاء يهوذا، ومن خط يهوذا جاء نسل داود.",
+"قصتها بتقول إن القيمة اللي عند الإنسان مش بتتحدد بالكامل بنظرة شخص تاني ليه.",
+"ليئة كانت ممكن تفضل طول حياتها تقارن نفسها براخيل، لكن الكتاب حفظ قصتها كجزء مهم من تاريخ شعب الله."
+],
+reflection:"أحيانًا بنقيس نفسنا على شخص تاني: شكله، نجاحه، علاقاته، أو حب الناس ليه. لكن قيمتك مش نتيجة مقارنة.",
+lesson:"رفض شخص ليك لا يعني إنك مرفوض عند ربنا، ومقارنة نفسك بغيرك ممكن تخليك مش شايف القيمة اللي في حياتك.",
+reference:"تكوين 29–30"
+},
+
+{
+name:"يوسف",
+icon:"🌾",
+category:"آباء",
+hook:"إخواته باعوه كعبد... وبعد سنين وقفوا قدامه وهم محتاجين مساعدته.",
+topics:["الصبر","الظلم","المسامحة","الأمل","الضيقة"],
+story:[
+"يوسف كان واحد من أبناء يعقوب، وكان أبوه بيحبه بشكل واضح. شاف أحلامًا جعلت إخوته يشعرون إنه هيكون له شأن كبير، وده زوّد الغيرة بينهم.",
+"في يوم، إخوته رموه في بئر وباعوه لقافلة ماشية إلى مصر. فجأة، الشاب اللي كان عايش مع أبوه بقى عبدًا في بلد غريبة.",
+"في مصر، اشتغل يوسف بأمانة في بيت فوطيفار، لكن اتعرض لاتهام ظالم وانتهى به الأمر في السجن رغم إنه ما عملش الجريمة اللي اتهموه بيها.",
+"حتى في السجن، استمر يوسف في خدمة اللي حواليه. وبعد سنوات، ربنا استخدم موهبته في تفسير الأحلام، وخرج من السجن إلى مكان لم يكن يتخيله: صار مسؤولًا كبيرًا في مصر.",
+"ثم جاءت سنوات الجوع، ودخل إخوته مصر يبحثون عن الطعام، ووقفوا أمام يوسف دون أن يعرفوه. يوسف كان يقدر ينتقم. لكنه اختار طريقًا أصعب: المسامحة.",
+"في النهاية كشف لهم عن نفسه، وبكى معهم، وسمح لعائلته بالاجتماع من جديد. الألم اللي بدأ كخيانة، ربنا استخدمه في حفظ حياة ناس كتير."
+],
+reflection:"يوسف ما كانش شايف النهاية وهو في البئر، ولا وهو في السجن. أحيانًا إحنا كمان بنحكم على قصتنا من منتصفها.",
+lesson:"مش كل تأخير هو رفض، ومش كل ظلم هو نهاية. قصة يوسف بتتكلم عن الصبر، وعن إن المسامحة ممكن تكون أقوى من الانتقام.",
+reference:"تكوين 37–50"
+},
+
+{
+name:"موسى",
+icon:"🔥",
+category:"قادة",
+hook:"كان هارب من مصر... لحد ما شاف نار بتولع ومش بتحرق.",
+topics:["الخوف","الشجاعة","التوهان","ربنا"],
+story:[
+"موسى اتولد في وقت كان فيه فرعون بيضطهد بني إسرائيل، واتحط في سفط على النيل حفاظًا على حياته، ووصل في النهاية إلى قصر فرعون.",
+"كبر موسى، وفي موقف قتل مصريًا كان بيضرب رجلًا عبرانيًا، وبعدها هرب من مصر خوفًا على حياته.",
+"عاش سنوات في أرض مديان، بعيدًا عن المكان اللي اتولد فيه، وكأنه بدأ حياة جديدة تمامًا.",
+"لكن عند جبل حوريب، ظهر له ملاك الرب في عليقة تتوقد بالنار دون أن تحترق. وهناك دعاه ربنا للرجوع إلى مصر وإخراج شعبه.",
+"موسى بدأ يقدم أعذارًا: مين أنا؟ مين هيصدقني؟ أنا مش فصيح. لكن ربنا لم يطلب منه أن يكون كاملًا؛ طلب منه أن يمشي معه.",
+"رجع موسى إلى مصر، وبدأت رحلة الخروج، التي قادت الشعب من العبودية إلى الحرية."
+],
+reflection:"ممكن تكون شايف نفسك مش مناسب للمهمة اللي قدامك. لكن أحيانًا المشكلة مش في قدراتك، بل في إنك مش شايف مين اللي بيدعوك.",
+lesson:"موسى يعلّمنا إن الخوف مش لازم يختفي تمامًا عشان نبدأ. ممكن نبدأ وإحنا خايفين، لكن مش لوحدنا.",
+reference:"خروج 2–14"
+},
+
+{
+name:"هارون",
+icon:"🕊️",
+category:"قادة",
+hook:"كان صوت موسى قدام فرعون... لكنه في لحظة ضعف وقف قدام شعبه ووقع في قرار صعب.",
+topics:["المسؤولية","القيادة","الفشل"],
+story:[
+"هارون كان أخو موسى، وربنا استخدمه كشريك له في مواجهة فرعون وإخراج بني إسرائيل من مصر.",
+"كان هارون المتحدث في مواقف كثيرة لأن موسى كان يشعر إنه بطيء الكلام. وكان دوره مهمًا جدًا في بداية الرحلة.",
+"لكن في موقف العجل الذهبي، لما تأخر موسى على الجبل، ضغط الشعب على هارون ليصنع لهم إلهًا. وهنا وقع هارون في قرار خاطئ وصنع العجل.",
+"الموقف يورينا إن الإنسان المسؤول ممكن يضعف تحت ضغط الناس. القيادة مش معناها إنك لا تخطئ، لكنها تعني إن قراراتك لها تأثير على غيرك.",
+"ومع ذلك استمر هارون في خدمته، وصار رئيس الكهنة، وكانت حياته جزءًا مهمًا من رحلة الشعب."
+],
+reflection:"ضغط الناس ممكن يخليك تعمل حاجة أنت أصلًا مش مقتنع بيها. السؤال مش بس: الناس عايزة إيه؟ لكن: الصح إيه؟",
+lesson:"هارون يذكرنا إن المسؤولية تحتاج شجاعة، وإن إرضاء الناس مش دايمًا هو الاختيار الصح.",
+reference:"خروج 4، 32؛ عدد 12–20"
+},
+
+{
+name:"يشوع",
+icon:"🛡️",
+category:"قادة",
+hook:"بعد موسى... كان عليه أن يقود شعب كامل، وهو عارف حجم المهمة اللي قدامه.",
+topics:["الشجاعة","الخوف","المسؤولية","ربنا"],
+story:[
+"يشوع كان واحدًا من الرجال الذين خرجوا مع موسى، وكان من الجواسيس الذين دخلوا أرض كنعان.",
+"مع كالب، كان يشوع من الذين صدقوا وعد ربنا، بينما خاف باقي الشعب من سكان الأرض.",
+"بعد موت موسى، انتقلت القيادة إلى يشوع. تخيل حجم المسؤولية: شعب كامل، أرض جديدة، معارك، وقرارات صعبة.",
+"لذلك تكرر له الكلام: تشدد وتشجع. لم يكن المطلوب منه أن يكون بلا خوف، لكن ألا يسمح للخوف أن يمنعه من الطاعة.",
+"قاد يشوع الشعب عبر الأردن، ودخلوا الأرض، وخاضوا معارك كثيرة، وفي النهاية شهدت حياته انتقال القيادة من جيل إلى جيل."
+],
+reflection:"في أوقات معينة، مشكلتك مش إنك مش قادر، لكن إنك بتبص لحجم المسؤولية وتنسى إنك مش لوحدك.",
+lesson:"يشوع يعلّمنا إن الشجاعة مش غياب الخوف، لكنها اختيار الاستمرار رغم الخوف.",
+reference:"يشوع 1–24"
+},
+
+{
+name:"راحاب",
+icon:"🏠",
+category:"نساء",
+hook:"كانت حياتها بعيدة عن الصورة المثالية... لكن قرار واحد جعل اسمها يدخل في قصة شعب كامل.",
+topics:["الفرصة الثانية","الشجاعة","الإيمان"],
+story:[
+"راحاب كانت تسكن في أريحا، واستضافت الجاسوسين اللذين أرسلهما يشوع. كانت تعرف أن شعب إسرائيل قادم وأن إله إسرائيل صنع أمورًا عظيمة.",
+"عندما علم ملك أريحا بوجود الجاسوسين، أخفتهم راحاب ووجهت رجال الملك في اتجاه آخر.",
+"لم يكن قرارها سهلًا؛ كانت تعرض نفسها للخطر. لكنها اختارت أن تؤمن بأن إله إسرائيل هو الإله الحقيقي.",
+"طلبت راحاب أن تُحفظ هي وعائلتها، وتم الاتفاق معها على علامة في البيت.",
+"عندما سقطت أريحا، نجت راحاب وأهل بيتها. ولم تتوقف قصتها هنا، بل أصبحت جزءًا من شعب إسرائيل."
+],
+reflection:"ماضي الإنسان مش لازم يكون آخر فصل في قصته.",
+lesson:"راحاب تذكرنا إن الإنسان ممكن يأخذ قرارًا جديدًا يغير اتجاه حياته بالكامل.",
+reference:"يشوع 2؛ 6"
+},
+
+{
+name:"دبورة",
+icon:"⚔️",
+category:"نساء",
+hook:"في وقت كان الشعب فيه محتاج قيادة... ظهرت امرأة تقود وتتكلم بشجاعة.",
+topics:["الشجاعة","القيادة","المسؤولية"],
+story:[
+"دبورة كانت نبية وقاضية لإسرائيل، وكان الشعب يصعد إليها للقضاء بين الناس.",
+"في وقت كان فيه يابين ملك كنعان يضغط على إسرائيل، دعت باراق ليقود الجيش، وأخبرته أن الرب أعطى وعدًا بالنصرة.",
+"باراق تردد وطلب أن تذهب دبورة معه. وافقت، لكنها أخبرته أن المجد في النهاية لن يكون له وحده.",
+"خرج الشعب إلى الحرب، وتحقق الانتصار. وكانت دبورة جزءًا أساسيًا من تشجيع القيادة وقت الخوف.",
+"قصة دبورة تذكرنا إن القيادة مش مرتبطة بالشكل المتوقع لها، لكنها مرتبطة بالشجاعة والطاعة."
+],
+reflection:"أحيانًا أنت الشخص اللي الناس حواليك محتاجين يسمعوا منه كلمة تشجيع.",
+lesson:"دبورة توري إن الشخص الشجاع ممكن يغيّر اتجاه ناس كتير من حوله.",
+reference:"قضاة 4–5"
+},
+
+{
+name:"جدعون",
+icon:"🔥",
+category:"قادة",
+hook:"كان شايف نفسه أضعف واحد... وربنا استخدمه رغم إحساسه ده.",
+topics:["الخوف","الشجاعة","الثقة","ربنا"],
+story:[
+"كان جدعون يعيش وقتًا صعبًا، وكان المديانيون يضغطون على إسرائيل. وعندما ظهر له ملاك الرب، كان جدعون مختبئًا وهو يدُرس الحنطة.",
+"دُعي جدعون بأنه رجل جبار البأس، لكنه لم يشعر بذلك. سأل: إن كان الرب معنا، فلماذا أصابنا كل هذا؟",
+"ربنا أرسله لإنقاذ إسرائيل، لكن جدعون كان محتاج تأكيدات كثيرة. وبعدها جمع جيشًا كبيرًا.",
+"لكن ربنا قلل عدد الجيش بشكل كبير، حتى صار 300 رجل فقط، لكي لا ينسب الشعب النصرة لقوته.",
+"في النهاية انتصر جدعون بطريقة لم يكن يتوقعها."
+],
+reflection:"إحساسك إنك ضعيف مش دليل إنك فعلًا ضعيف. أحيانًا أنت شايف نفسك من زاوية مختلفة عن اللي ربنا شايفك بيها.",
+lesson:"جدعون يعلّمنا إن القوة مش دايمًا في العدد أو الإمكانيات، لكنها في الثقة والطاعة.",
+reference:"قضاة 6–8"
+},
+
+{
+name:"شمشون",
+icon:"💪",
+category:"قادة",
+hook:"كان أقوى من أي حد حواليه... لكن أكبر معاركه كانت مع نفسه.",
+topics:["الاختيارات","الضعف","التوبة"],
+story:[
+"شمشون كان مكرسًا لله منذ ولادته، وأعطاه الرب قوة استثنائية لمحاربة الفلسطينيين.",
+"لكن حياته كانت مليانة اختيارات شخصية وعلاقات ومواقف كان فيها بيستخدم قوته بطريقة اندفاعية.",
+"دخل في علاقة مع دليلة، وضغطت عليه مرارًا حتى كشف لها سر قوته، فتم تسليمه للفلسطينيين.",
+"أُسر شمشون وفقد عينيه، ووصل إلى مرحلة شديدة من الانكسار.",
+"وفي آخر حياته، صلى إلى الرب، واستعاد قوته في موقف أخير، وأسقط مبنى أعدائه.",
+"قصته مؤلمة لأنها بتورينا إن الموهبة والقوة لا تكفيان إذا كانت الاختيارات بعيدة عن ربنا."
+],
+reflection:"ممكن تكون عندك موهبة قوية جدًا، لكن السؤال الأهم: بتستخدمها إزاي؟",
+lesson:"قصة شمشون تحذرنا من الاستهانة بالضعف الداخلي، لكنها أيضًا تذكرنا إن الرجوع إلى ربنا ممكن حتى بعد السقوط.",
+reference:"قضاة 13–16"
+},
+
+{
+name:"صموئيل",
+icon:"🕯️",
+category:"أنبياء",
+hook:"كان طفلًا صغيرًا... وفي ليلة هادئة سمع صوتًا وناداه ربنا.",
+topics:["سماع ربنا","الدعوة","الطاعة"],
+story:[
+"حنة أم صموئيل كانت تصلي بحرارة من أجل ابن، ووعدت أن تقدمه للرب. وعندما ولدته، أوفت بوعدها.",
+"كبر صموئيل في بيت الرب تحت رعاية عالي الكاهن.",
+"في إحدى الليالي، سمع صموئيل صوتًا يناديه، وظن أن عالي هو الذي يناديه. تكرر الأمر أكثر من مرة.",
+"فهم عالي في النهاية أن الرب هو الذي ينادي الصبي، وعلّمه أن يقول: تكلم يا رب لأن عبدك سامع.",
+"من هنا بدأت رحلة صموئيل كنبي وقاضٍ في إسرائيل، وكان له دور كبير في انتقال الشعب من زمن القضاة إلى زمن الملوك."
+],
+reflection:"مش كل صوت بنسمعه هو صوت ربنا، وعلشان كده محتاجين نتعلم نميز ونرجع لكلمة ربنا.",
+lesson:"صموئيل يذكرنا إن الاستماع الحقيقي يحتاج قلب مستعد للطاعة، مش مجرد رغبة في سماع إجابة.",
+reference:"1 صموئيل 1–3"
+},
+
+{
+name:"شاول",
+icon:"👑",
+category:"ملوك",
+hook:"بدأ كملك متواضع... لكن مع الوقت بقى الخوف من الناس أقوى من طاعته لربنا.",
+topics:["الخوف","السلطة","الطاعة","الفشل"],
+story:[
+"شاول كان أول ملك على إسرائيل. في البداية ظهر متواضعًا، وكان الشعب يراه اختيارًا مناسبًا.",
+"لكن مع الوقت بدأت قراراته تكشف مشكلة أعمق: كان يهتم بنظرة الناس ورضاهم.",
+"في أكثر من موقف، لم يلتزم بما أمره الرب به، وحاول أن يبرر قراراته.",
+"ثم ظهر داود، وبدأ الشعب يهتف له أكثر من شاول. هنا تحوّل خوف شاول إلى غيرة، والغيرة إلى محاولة قتل داود.",
+"انتهت حياة شاول في مأساة، بعد سنوات كان يمكن أن تكون مختلفة."
+],
+reflection:"أحيانًا مشكلتنا مش في الناس اللي حوالينا، لكن في خوفنا من إنهم يكونوا أحسن مننا.",
+lesson:"شاول يورينا إن النجاح الخارجي مش ضمان إن القلب يفضل ثابت، وإن الغيرة ممكن تحول صاحبها لشخص مختلف.",
+reference:"1 صموئيل 8–31"
+},
+
+{
+name:"داود",
+icon:"🪨",
+category:"ملوك",
+hook:"كل الجيش كان خايف من جليات... لكن الولد الصغير قرر يواجهه.",
+topics:["الشجاعة","الخوف","الرفض","الفشل","ربنا"],
+story:[
+"داود كان أصغر إخواته، وكان دوره في البيت رعاية الغنم. لم يكن قائد جيش ولا محاربًا مشهورًا.",
+"عندما ذهب لزيارة إخوته في الجيش، سمع جليات يتحدى شعب إسرائيل. كل الناس كانت شايفة عملاقًا، لكن داود شاف المشكلة من زاوية مختلفة.",
+"أخذ خمسة أحجار ملساء ومقلاعه، وواجه جليات. لم تكن قوته في السلاح، بل في ثقته بربنا.",
+"بعد الانتصار، بدأت حياة داود تتغير. أصبح مشهورًا، لكن شهرة داود جعلت شاول يغار منه ويطارده.",
+"وفي النهاية صار داود ملكًا. لكنه هو أيضًا سقط في خطايا كبيرة، ودفع ثمن اختياراته، ثم تاب أمام ربنا.",
+"قصة داود مش قصة إنسان كامل، لكنها قصة إنسان عرف يرجع."
+],
+reflection:"مش لازم تكون أقوى شخص في المكان عشان تواجه مشكلتك. وأحيانًا أكبر انتصار محتاجه مش على جليات، لكن على خوفك أو كبريائك.",
+lesson:"داود يعلّمنا الشجاعة والإيمان، وفي نفس الوقت يذكرنا إن السقوط لا يلغي إمكانية التوبة والرجوع.",
+reference:"1 صموئيل 16–31؛ 2 صموئيل 1–24"
+},
+
+{
+name:"يوناثان",
+icon:"🤝",
+category:"قادة",
+hook:"كان ابن الملك... وكان من الطبيعي إنه يكون صاحب العرش، لكنه اختار يحب صديقه بدل ما يغار منه.",
+topics:["المحبة","الصداقة","الغيرة"],
+story:[
+"يوناثان كان ابن شاول، وكان طبيعيًا أن يكون له مستقبل ملكي. لكنه عندما رأى داود، أدرك أن ربنا يستخدمه بطريقة مختلفة.",
+"نشأت صداقة قوية بين الاثنين، رغم أن شاول كان يريد قتل داود.",
+"يوناثان وقف إلى جانب داود وحاول حمايته، رغم أن نجاح داود كان يعني أن الطريق للعرش لن يكون له.",
+"كان ممكن يعتبر داود منافسًا، لكنه اختار المحبة والوفاء.",
+"انتهت حياة يوناثان في المعركة مع شاول، وترك خلفه مثالًا نادرًا للصداقة اللي لا تقوم على المصلحة."
+],
+reflection:"هل تقدر تفرح لنجاح شخص أنت كنت تتمنى تكون مكانه؟",
+lesson:"يوناثان يعلّمنا إن المحبة الحقيقية لا تحتاج أن تخسر عشان غيرك يكسب.",
+reference:"1 صموئيل 18–31"
+},
+
+{
+name:"سليمان",
+icon:"👑",
+category:"ملوك",
+hook:"ربنا قال له: اطلب ماذا أعطيك؟ فاختار شيئًا أكبر من المال.",
+topics:["الحكمة","العطايا","المسؤولية"],
+story:[
+"بعد داود، أصبح سليمان ملكًا. وفي بداية ملكه، ظهر له الرب وقال له إنه يمكن أن يطلب ما يشاء.",
+"سليمان لم يطلب عمرًا طويلًا أو غنى أو انتقامًا من أعدائه، لكنه طلب قلبًا فهيمًا ليحكم الشعب.",
+"أعطاه الرب حكمة عظيمة، واشتهر سليمان بالحكمة والغنى، وبنى الهيكل في أورشليم.",
+"لكن مع مرور الوقت، بدأت حياته تتغير. كثرة العلاقات والزواج من نساء من أمم أخرى أثرت على قلبه، والكتاب يذكر أنه مال وراء آلهة أخرى.",
+"قصة سليمان مؤلمة لأنها توضح إن البداية الجيدة لا تعني تلقائيًا نهاية جيدة."
+],
+reflection:"ممكن ربنا يديك عطية عظيمة، لكن الأهم من العطية هو إن قلبك يفضل ثابت.",
+lesson:"سليمان يذكرنا إن الحكمة لا تعني فقط معرفة الصح، بل الاستمرار في اختياره.",
+reference:"1 ملوك 1–11"
+},
+
+{
+name:"رحبعام",
+icon:"👑",
+category:"ملوك",
+hook:"كان قدامه اختيار بسيط: يسمع نصيحة الحكماء... أو يسمع أصحابه.",
+topics:["القرارات","الكبرياء","الحكمة"],
+story:[
+"رحبعام ورث العرش بعد سليمان. جاء الشعب إليه يطلب تخفيف النير الذي وضعه سليمان عليهم.",
+"استشار رحبعام الشيوخ الذين خدموا مع أبيه، فنصحوه أن يكون رحيمًا ويستجيب للشعب.",
+"لكنه رفض نصيحتهم وذهب إلى الشباب الذين نشأوا معه، فأشاروا عليه أن يكون أكثر قسوة.",
+"اختار رحبعام النصيحة الأسوأ، وكانت النتيجة انقسام المملكة.",
+"قرار واحد اتاخد في بداية حكمه كان له أثر ضخم على تاريخ الشعب."
+],
+reflection:"مش كل شخص قريب منك هو الشخص الصح اللي تاخد منه نصيحة.",
+lesson:"رحبعام يعلّمنا إن الحكمة أحيانًا تعني إننا نسمع كلامًا مش على مزاجنا.",
+reference:"1 ملوك 12"
+},
+
+{
+name:"إيليا",
+icon:"🔥",
+category:"أنبياء",
+hook:"واجه مئات الأنبياء وانتصر... وبعدها بوقت قصير انهار وقال: كفى.",
+topics:["الإرهاق","الوحدة","الخوف","الأمل"],
+story:[
+"إيليا وقف في مواجهة أنبياء البعل على جبل الكرمل في موقف من أقوى مشاهد العهد القديم.",
+"بعد انتصار عظيم وظهور قوة الرب، لم يتوقع أحد أن يهرب إيليا بسبب تهديد إيزابل.",
+"لكن إيليا هرب إلى البرية، وجلس تحت شجرة وقال إنه يريد الموت.",
+"اللافت إن ربنا لم يوبخه في لحظة انهياره. أطعمه وتركه يرتاح، ثم جاء إليه بصوت هادئ.",
+"بعدها أعطاه الرب مهمة جديدة، وأخبره أنه ليس وحده، وأن هناك سبعة آلاف لم يحنوا ركبة لبعل.",
+"إيليا الذي شعر أنه الوحيد، اكتشف أنه ليس وحده."
+],
+reflection:"بعد ضغط طويل، ممكن جسمك ونفسك يقولوا لك: كفاية. الاعتراف بالتعب مش ضعف.",
+lesson:"قصة إيليا تذكرنا إن ربنا يهتم بالإنسان كله، وإن فترة الانهيار مش بالضرورة نهاية القصة.",
+reference:"1 ملوك 17–19"
+},
+
+{
+name:"أليشع",
+icon:"🫗",
+category:"أنبياء",
+hook:"استلم عباءة إيليا... وبدأ خدمته من مكان لم يكن هو صاحب القرار فيه.",
+topics:["الدعوة","العطايا","الإيمان"],
+story:[
+"أليشع كان يعمل في الحقل عندما مر به إيليا وألقى عليه رداءه، في إشارة إلى دعوته.",
+"ترك أليشع حياته القديمة وتبع إيليا، وخدمه حتى لحظة صعود إيليا.",
+"بعد رحيل إيليا، طلب أليشع نصيب اثنين من روح إيليا، واستمر في خدمة الشعب.",
+"خدم أليشع في مواقف كثيرة، وشهد الكتاب من خلاله معجزات مثل تكثير الزيت وشفاء نعمان.",
+"كان أليشع جزءًا من سلسلة طويلة من الخدمة، ولم يبدأ من الصفر؛ كان هناك شخص سبقه وعلّمه."
+],
+reflection:"مش لازم تكون أول شخص يعمل الحاجة عشان يكون لحياتك تأثير.",
+lesson:"أليشع يذكرنا بقيمة التلمذة، وإن العطية الحقيقية تتحول إلى خدمة للآخرين.",
+reference:"1 ملوك 19؛ 2 ملوك 2–13"
+},
+
+{
+name:"حزقيا",
+icon:"🙏",
+category:"ملوك",
+hook:"لما جيش قوي حاصر أورشليم، دخل الملك إلى الهيكل وقدم الأمر لربنا.",
+topics:["الصلاة","الخوف","الضيقة"],
+story:[
+"حزقيا كان ملكًا على يهوذا، وعاش وقتًا شديد الصعوبة عندما حاصر سنحاريب ملك أشور المدن وأرسل رسائل تهديد.",
+"كان الموقف أكبر من قدرات المملكة، لكن حزقيا أخذ الرسائل وبسطها أمام الرب.",
+"صلى وطلب تدخل الله، وجاء إشعياء برسالة تشجيع.",
+"في تلك الليلة حدثت ضربة في جيش أشور واضطر سنحاريب للرحيل.",
+"حياة حزقيا تضمنت أيضًا ضعفًا وكبرياء في مراحل أخرى، لكنها تحتوي على واحد من أوضح مشاهد اللجوء إلى الصلاة وقت الأزمة."
+],
+reflection:"لما المشكلة أكبر منك، مش لازم تتظاهر إنك قادر عليها لوحدك.",
+lesson:"حزقيا يورينا إن الصلاة مش هروب من المشكلة، لكنها وضع المشكلة أمام الشخص الأقوى منك.",
+reference:"2 ملوك 18–20؛ إشعياء 36–39"
+},
+
+{
+name:"يوشيا",
+icon:"📖",
+category:"ملوك",
+hook:"كان صغيرًا على الحكم... لكنه اكتشف كتاب الشريعة وقرر يبدأ إصلاحًا كبيرًا.",
+topics:["التغيير","الرجوع","الطاعة"],
+story:[
+"يوشيا أصبح ملكًا وهو صغير، وفي فترة حكمه بدأ يبحث عن الرب.",
+"أثناء ترميم الهيكل، وجدوا سفر الشريعة. عندما سمع يوشيا الكلام، مزق ثيابه لأنه أدرك حجم ابتعاد الشعب.",
+"لم يقل إن الموضوع قديم أو إن التغيير صعب. بدأ حملة إصلاح واسعة، وأزال مظاهر العبادة الوثنية.",
+"جدد العهد أمام الرب، وحاول إعادة الشعب إلى طريق الطاعة.",
+"قصة يوشيا تقول إن اكتشاف الحقيقة المفروض يقود إلى تغيير، مش مجرد معرفة."
+],
+reflection:"لما تكتشف حاجة غلط في حياتك، هل بتبررها ولا بتبدأ تصلحها؟",
+lesson:"يوشيا يعلّمنا إن السن أو الظروف مش عذر دائمًا، وإن الإصلاح ممكن يبدأ بقرار شخص واحد.",
+reference:"2 ملوك 22–23"
+},
+
+{
+name:"إشعياء",
+icon:"📜",
+category:"أنبياء",
+hook:"دخل الهيكل وشاف رؤية هزته... وخرج منها وهو عارف إن حياته ليها رسالة.",
+topics:["الدعوة","الرهبة","الرسالة"],
+story:[
+"إشعياء كان نبيًا في يهوذا، وفي سنة وفاة عزيا الملك، رأى الرب في الهيكل في رؤية عظيمة.",
+"شعر إشعياء بعدم استحقاقه وقال إنه إنسان نجس الشفتين، لكن أحد السرافيم مس شفتيه بجمرة من المذبح.",
+"ثم سمع السؤال: من أرسل؟ فكان رد إشعياء: هأنذا أرسلني.",
+"خدم إشعياء في فترة سياسية ودينية صعبة، وكان يحمل رسائل تحذير ورجاء.",
+"كتاب إشعياء مليء بنبوءات ورؤى، ويحتوي على رسائل قوية عن القداسة والدينونة والرجاء."
+],
+reflection:"أحيانًا أول خطوة في الدعوة مش إنك تحس إنك جاهز، لكن إنك تدرك إنك محتاج ربنا.",
+lesson:"إشعياء يذكرنا إن الإحساس بعدم الاستحقاق لا يمنع أن تكون لحياتك رسالة.",
+reference:"إشعياء 1–66"
+},
+
+{
+name:"إرميا",
+icon:"😢",
+category:"أنبياء",
+hook:"كان بيحذر شعبه من كارثة قادمة... والناس رفضت تسمعه.",
+topics:["الرفض","الصبر","الأمانة"],
+story:[
+"إرميا دُعي للنبي وهو صغير، وقال إنه لا يعرف كيف يتكلم لأنه ولد.",
+"لكن الرب أرسله ليعلن رسائل للشعب في وقت كان فيه الفساد والابتعاد عن الله منتشرين.",
+"إرميا لم يكن محبوبًا بسبب رسالته. تعرض للرفض والضرب والسجن، ووصل به الألم إلى إنه يشتكي من صعوبة مهمته.",
+"ومع ذلك استمر يتكلم. لم يكن نجاحه هو أن الناس كلها وافقته، بل أن يظل أمينًا للرسالة.",
+"وفي وسط رسائل الدينونة، كان إرميا يحمل أيضًا رسائل رجاء وعهد جديد."
+],
+reflection:"هل قيمتك مرتبطة بعدد الناس اللي بيوافقوا عليك؟",
+lesson:"إرميا يعلّمنا إن الأمانة مش معناها إن الكل هيحبك، وإن الإنسان ممكن يتعب وهو بيعمل الصح.",
+reference:"إرميا 1–52"
+},
+
+{
+name:"حزقيال",
+icon:"👁️",
+category:"أنبياء",
+hook:"كان في أرض السبي... وربنا استخدمه برسائل ورؤى وسط شعب محطم.",
+topics:["الأمل","السبي","ربنا موجود"],
+story:[
+"حزقيال كان من المسبيين في بابل، وهناك جاءت إليه دعوة الرب ليكون نبيًا.",
+"رأى رؤى قوية جدًا، منها منظر مجد الرب ورؤية العظام اليابسة.",
+"في رؤية العظام اليابسة، سأل الرب: أتحيا هذه؟ وكانت الرسالة عن رجاء شعب يبدو كأنه انتهى.",
+"حزقيال كان يتكلم إلى ناس فقدوا وطنهم وشعروا إن كل شيء انتهى.",
+"رسائله جمعت بين التحذير والرجاء، وأكدت إن الله قادر على أن يعطي حياة لما يبدو ميتًا."
+],
+reflection:"في حاجات ممكن تبان لك منتهية تمامًا، لكن النهاية اللي أنت شايفها مش بالضرورة نهاية ربنا.",
+lesson:"حزقيال يقدّم صورة قوية للرجاء وسط الخراب واليأس.",
+reference:"حزقيال 1–48"
+},
+
+{
+name:"دانيال",
+icon:"🦁",
+category:"أنبياء",
+hook:"رمَوه وسط الأسود... لكن الصبح حصل شيء محدش كان متوقعه.",
+topics:["الشجاعة","الصلاة","الخوف","ربنا"],
+story:[
+"دانيال أُخذ إلى بابل وهو شاب، وتعلم في قصر الملك، لكنه حافظ على إيمانه وهويته.",
+"مع الوقت أصبح صاحب مكانة عالية، وده جعل بعض المسؤولين يحاولون إيجاد سبب ضده.",
+"لما صدر قرار يمنع الصلاة لأي إله أو إنسان غير الملك، دانيال لم يغير عادته. فتح نوافذه وصلى كما كان يفعل دائمًا.",
+"تم القبض عليه وألقي في جب الأسود. الملك نفسه كان قلقًا عليه.",
+"في الصباح، جاء الملك بسرعة وسأل دانيال إن كان إلهه قد أنقذه. دانيال كان حيًا، وقال إن الله أرسل ملاكه وسد أفواه الأسود.",
+"دانيال لم يكن محميًا من المشكلة، لكنه لم يكن وحده داخلها."
+],
+reflection:"الإيمان مش وعد إنك مش هتدخل الحفرة، لكنه يغيّر طريقة وجودك جواها.",
+lesson:"دانيال يعلّمنا الثبات وقت الضغط، وعدم تغيير مبادئنا فقط لأن الظروف صعبة.",
+reference:"دانيال 1–6"
+},
+
+{
+name:"عزرا",
+icon:"📖",
+category:"قادة",
+hook:"لم يكن دوره مجرد قراءة الشريعة... كان عايز الناس تفهمها وتعيشها.",
+topics:["كلمة ربنا","التغيير","التعليم"],
+story:[
+"عزرا كان كاتبًا ماهرًا في شريعة موسى، وعاش بعد السبي في بابل.",
+"رجع إلى أورشليم في وقت كان الشعب فيه محتاج لإعادة ترتيب حياته الروحية.",
+"كان قلب عزرا مشتاقًا أن يدرس الشريعة ويعمل بها ويعلّمها للناس.",
+"وقف أمام الشعب وقرأ من سفر الشريعة، وشارك اللاويون في شرح الكلام حتى يفهم الناس.",
+"دوره يوضح إن معرفة الكتاب مش هدفها المعلومات فقط، لكنها المفروض تقود إلى حياة مختلفة."
+],
+reflection:"هل معرفتك بكلمة ربنا بتغير طريقة حياتك، ولا بتقف عند المعلومات؟",
+lesson:"عزرا يذكرنا بثلاث خطوات قوية: أتعلم، أعمل، وأعلّم.",
+reference:"عزرا 7–10؛ نحميا 8"
+},
+
+{
+name:"نحميا",
+icon:"🧱",
+category:"قادة",
+hook:"شاف سور مدينته متهدم... وما اكتفاش بالحزن، قام وبنى.",
+topics:["المسؤولية","الإحباط","البداية"],
+story:[
+"نحميا كان يعمل ساقيًا للملك في فارس عندما سمع أن أورشليم ما زالت في حالة خراب وأن أسوارها مهدمة.",
+"حزن وصام وصلى، ثم طلب من الملك أن يسمح له بالعودة لإعادة بناء المدينة.",
+"عندما وصل، فحص الأسوار ليلًا بنفسه، ثم جمع الشعب وبدأ العمل.",
+"واجه مقاومة وسخرية وتهديدات، لكن الشعب استمر في البناء، وفي نفس الوقت كان عليهم أن يكونوا مستعدين للدفاع.",
+"في وقت قصير نسبيًا تم بناء السور، وأصبح المشروع مثالًا على ما يمكن أن يحدث عندما يتحول الحزن إلى مسؤولية وعمل."
+],
+reflection:"ممكن تفضل تبص لحاجة مكسورة في حياتك وتقول: مفيش فايدة. نحميا بدأ بحجر واحد ومجموعة ناس.",
+lesson:"نحميا يعلّمنا إن الصلاة والعمل مش ضد بعض؛ أحيانًا الصلاة الحقيقية تقودك إنك تقوم وتبدأ.",
+reference:"نحميا 1–6"
+},
+
+{
+name:"أستير",
+icon:"👑",
+category:"نساء",
+hook:"كانت ملكة... لكن كان لازم تخاطر بمكانتها عشان تنقذ شعبها.",
+topics:["الشجاعة","الخوف","المسؤولية"],
+story:[
+"أستير فتاة يهودية أصبحت ملكة في فارس، لكنها أخفت هويتها في البداية.",
+"ظهر هامان بمؤامرة لإهلاك اليهود، وكان الأمر أكبر من قدرة أي شخص عادي على تغييره.",
+"مردخاي طلب من أستير أن تتدخل عند الملك. المشكلة أن الدخول إلى الملك بدون دعوة كان ممكن يؤدي إلى الموت.",
+"أستير صامتة لحظة، ثم قررت أن تدخل. طلبت من الشعب أن يصوموا من أجلها، وقالت إنها ستذهب رغم الخطر.",
+"دخلت على الملك، واستخدمت حكمتها في ترتيب الموقف، وانكشف مخطط هامان، ونجا الشعب.",
+"قصة أستير بتتكلم عن شخص وجد نفسه في مكان معين في وقت معين، وكان عليه أن يستخدم مكانه للخير."
+],
+reflection:"يمكن المكان اللي أنت فيه دلوقتي مش صدفة، ويمكن في حاجة محتاجة شجاعتك.",
+lesson:"أستير تذكرنا إن الشجاعة مش معناها إنك مش خايف، لكن إنك تعمل الصح رغم الخوف.",
+reference:"أستير 1–10"
+},
+
+{
+name:"مردخاي",
+icon:"🛡️",
+category:"قادة",
+hook:"رفض ينحني لشخص ظالم... ودفع ثمن موقفه، لكنه لم يتراجع.",
+topics:["الثبات","الشجاعة","الضغط"],
+story:[
+"مردخاي كان من اليهود الموجودين في شوشن، وكان له دور مهم في تربية أستير.",
+"عندما أصدر هامان أمرًا، رفض مردخاي أن ينحني له. غضب هامان وقرر الانتقام منه ومن كل اليهود.",
+"دخل مردخاي في وقت خوف وحداد، لكنه لم يتخل عن موقفه.",
+"ساعد أستير في فهم خطورة اللحظة ودفعها للتدخل.",
+"في النهاية انقلبت المؤامرة على هامان، وتم تكريم مردخاي بدلًا من إذلاله.",
+"قصة مردخاي تذكرنا إن الثبات على مبدأ ممكن يكون مكلفًا، لكنه قد يصنع فرقًا أكبر مما نتخيل."
+],
+reflection:"هل ممكن تتمسك بمبدأك حتى لو كل اللي حواليك بيقولوا لك: اعمل زي الناس؟",
+lesson:"مردخاي يعلّمنا قيمة الثبات وعدم بيع المبادئ مقابل السلام المؤقت.",
+reference:"أستير 2–10"
+},
+
+{
+name:"أيوب",
+icon:"🌧️",
+category:"آباء",
+hook:"خسر تقريبًا كل حاجة... وأصبح السؤال مش: ليه الألم؟ لكن: هل لسه ربنا موجود؟",
+topics:["الصبر","الألم","ربنا","الضيقة"],
+story:[
+"أيوب كان رجلًا مستقيمًا وغنيًا وله أسرة وحياة مستقرة.",
+"في فترة قصيرة، فقد ممتلكاته وأولاده وصحته. الألم كان أكبر من أي تفسير بسيط.",
+"جاء أصدقاؤه وحاولوا تفسير ألمه، وكأن وجود المصيبة دليل مباشر على خطية معينة. لكن أيوب لم يجد إجابة سهلة.",
+"صرخ وسأل واعترض وتكلم عن ألمه. الكتاب لم يصوره كشخص مبتسم طوال الوقت، بل كشخص مجروح يحاول يفهم.",
+"في النهاية تحدث الرب مع أيوب، ولم يعطه إجابة لكل سؤال بالطريقة التي كان يتوقعها، لكنه أعاد توجيه نظره إلى عظمة الله.",
+"وانتهت القصة بردّ الرب لأيوب وتعويضه وبركته."
+],
+reflection:"الإيمان مش معناه إنك ممنوع تسأل. أيوب سأل أسئلة صعبة جدًا، لكنه ظل في علاقة مع ربنا.",
+lesson:"أيوب يعلّمنا الصبر، لكن كمان يعلّمنا إن الألم مش دايمًا له تفسير سريع، وإن ربنا أكبر من فهمنا المحدود.",
+reference:"أيوب 1–42"
+},
+
+{
+name:"يونان",
+icon:"🐋",
+category:"أنبياء",
+hook:"ربنا قال له روح نينوى... ويونان قرر يروح الناحية التانية.",
+topics:["الهروب","المسؤولية","التوبة","ربنا"],
+story:[
+"جاءت كلمة الرب إلى يونان وأرسلته إلى نينوى لينادي عليها بسبب شرها.",
+"لكن يونان لم يعجبه الأمر، فقام ليهرب إلى ترشيش، أي في الاتجاه المعاكس.",
+"ركب سفينة، وحدثت عاصفة شديدة. أدرك البحارة أن يونان مرتبط بالمشكلة، وفي النهاية أُلقي في البحر.",
+"أعد الرب حوتًا عظيمًا ابتلع يونان، وهناك صلى يونان من جوف الحوت.",
+"خرج يونان وذهب إلى نينوى، ووعظ الشعب، فتابوا عن شرهم.",
+"لكن يونان نفسه غضب لأن الله رحم المدينة. وهنا تظهر المفارقة: الرجل الذي اختبر رحمة ربنا لم يكن مستعدًا أن يراها في غيره."
+],
+reflection:"ممكن تكون طالب رحمة لنفسك، لكن مش مستعد تدي نفس الرحمة لحد تاني.",
+lesson:"يونان يعلّمنا إن طاعة ربنا مش بس تنفيذ أوامر، لكنها كمان تغيير القلب تجاه الناس.",
+reference:"يونان 1–4"
+},
+
+{
+name:"راعوث",
+icon:"🌾",
+category:"نساء",
+hook:"كان ممكن ترجع لحياتها القديمة... لكنها قالت لنُعمي: شعبك شعبي وإلهك إلهي.",
+topics:["المحبة","الوفاء","البداية الجديدة"],
+story:[
+"راعوث كانت موآبية وتزوجت من رجل إسرائيلي، لكن زوجها مات، وكذلك مات زوج أختها، وبقيت راعوث مع حماتها نُعمي.",
+"نُعمي طلبت من راعوث أن ترجع إلى شعبها وتبدأ حياة جديدة، لكن راعوث اختارت البقاء معها.",
+"ذهبت معها إلى بيت لحم، وبدأت تجمع السنابل وراء الحصادين حتى تحصل على الطعام.",
+"التقت ببوعز، وكان رجلًا من أقارب نُعمي. لاحظ أمانتها، وتطورت القصة إلى زواج وبداية عائلة جديدة.",
+"أصبحت راعوث جزءًا من نسل داود، وبالتالي دخلت قصتها في خط مهم جدًا في تاريخ الكتاب المقدس."
+],
+reflection:"الوفاء الحقيقي بيبان وقت ما مفيش مصلحة مباشرة ترجع عليك.",
+lesson:"راعوث تذكرنا إن قرارًا بسيطًا من المحبة والوفاء ممكن يفتح بابًا لحياة جديدة تمامًا.",
+reference:"راعوث 1–4"
+},
+
+{
+name:"حنة",
+icon:"🙏",
+category:"نساء",
+hook:"كانت بتبكي وتصلي... لحد ما ظن عالي إنها سكرانة.",
+topics:["الصلاة","الانتظار","ربنا بيسمع"],
+story:[
+"حنة كانت تعاني من عدم الإنجاب، وكانت تُرى وسط ألم شديد بسبب هذا الأمر.",
+"كانت تصعد إلى بيت الرب وتبكي وتصلي، ووصل ألمها لدرجة أن عالي الكاهن ظن أنها سكرانة.",
+"لكنها شرحت له أنها امرأة حزينة تسكب نفسها أمام الرب.",
+"صلت ووعدت إن أعطاها الرب ابنًا ستقدمه لخدمته.",
+"ولدت صموئيل، وأوفت بوعدها، وقدمت الطفل للرب.",
+"قصة حنة بدأت من وجع شخصي جدًا، لكنها تحولت إلى جزء مهم من قصة نبي خدم أمة كاملة."
+],
+reflection:"الصلاة مش لازم تكون كلمات مرتبة. أحيانًا الصلاة الحقيقية هي إنك تسكب قلبك قدام ربنا.",
+lesson:"حنة تذكرنا إن ربنا يسمع حتى الصلاة اللي طالعة من قلب مكسور.",
+reference:"1 صموئيل 1–2"
+},
+
+{
+name:"بلعام",
+icon:"🐴",
+category:"أنبياء",
+hook:"كان ماشي في طريقه... لكن حماره شاف اللي هو ما شافوش.",
+topics:["الطاعة","العمى الروحي","التحذير"],
+story:[
+"بالاق ملك موآب طلب من بلعام أن يلعن شعب إسرائيل، لكن الله تدخل وأخبره ألا يفعل ذلك.",
+"في الطريق، وقف ملاك الرب في الطريق، ورآه الحمار بينما لم يره بلعام.",
+"الحمار انحرف وضغط على رجل بلعام، ثم توقف تمامًا. غضب بلعام وضرب الحمار.",
+"بعدها فتح الرب عيني بلعام فرأى ملاك الرب، وفهم أن الطريق الذي كان يسير فيه كان خطيرًا.",
+"في النهاية لم يستطع بلعام أن يلعن إسرائيل كما طلب بالاق، بل نطق بما سمح به الله.",
+"القصة تحمل تحذيرًا قويًا عن الإنسان الذي يرى ما يريد ولا يرى التحذير أمامه."
+],
+reflection:"هل ممكن تكون مصمم على حاجة لدرجة إنك مش شايف إن في تحذيرات حواليك؟",
+lesson:"قصة بلعام تذكرنا إن الإنسان ممكن يحتاج يتوقف ويسأل نفسه: هل أنا ماشي في الطريق الصح أصلًا؟",
+reference:"عدد 22–24"
+},
+
+{
+name:"يثرون",
+icon:"🧠",
+category:"قادة",
+hook:"شاف موسى شايل كل مشاكل الشعب لوحده... وقال له: اللي بتعمله ده مش صح.",
+topics:["الحكمة","المسؤولية","المشورة"],
+story:[
+"يثرون كان حمو موسى وكاهن مديان. عندما سمع بما فعله الله مع إسرائيل، جاء لمقابلة موسى.",
+"رأى موسى جالسًا طوال اليوم يحكم بين الشعب، وكل المشاكل تمر من خلاله.",
+"قال له يثرون إن الطريقة دي هتتعبه وتتعب الشعب، ونصحه بتقسيم المسؤوليات واختيار رجال قادرين يخدموا معه.",
+"موسى قبل النصيحة ونفذها.",
+"يثرون لم يقدم معجزة، لكنه قدم شيئًا أحيانًا أهم: مشورة حكيمة في الوقت المناسب."
+],
+reflection:"مش كل مساعدة لازم تكون فلوس أو معجزة. أحيانًا كلمة حكيمة توفر عليك سنين من التعب.",
+lesson:"يثرون يعلّمنا قيمة المشورة، وإن القائد الذكي يعرف يسمع ويعترف إنه مش لازم يعمل كل حاجة بنفسه.",
+reference:"خروج 18"
+},
+
+{
+name:"زربابل",
+icon:"🧱",
+category:"قادة",
+hook:"رجع من السبي وبدأ يبني... لكن الطريق كان مليان إحباط ومقاومة.",
+topics:["البداية","الإحباط","الأمل"],
+story:[
+"زربابل كان من القادة الذين عادوا من السبي إلى أورشليم، وكان له دور مهم في إعادة بناء الهيكل.",
+"بدأ العمل بحماس، ووضعوا أساس الهيكل وسط فرح كبير.",
+"لكن المقاومة ظهرت، وتوقف العمل لفترة، وأصبح المشروع يبدو كأنه لن يكتمل.",
+"جاءت رسائل تشجيع من الأنبياء، وتم تذكير الشعب بأن العمل لن يقوم بالقوة البشرية وحدها.",
+"استمر البناء حتى اكتمل الهيكل.",
+"قصة زربابل تشبه أشياء كثيرة في حياتنا: بداية قوية، توقف، إحباط، ثم رجوع واستكمال."
+],
+reflection:"مش معنى إن حاجة وقفت فترة إنها ماتت. أحيانًا محتاجة وقت وتشجيع عشان تكمل.",
+lesson:"زربابل يذكرنا إن المشاريع الكبيرة محتاجة صبر وثبات، وإن التوقف المؤقت مش لازم يتحول إلى استسلام.",
+reference:"عزرا 3–6؛ حجي 1–2؛ زكريا 4"
+},
+
+{
+name:"ملاخي",
+icon:"📜",
+category:"أنبياء",
+hook:"الشعب كان بيعمل ممارسات دينية... لكن قلوبهم كانت بعيدة، وملاخي واجههم بالحقيقة.",
+topics:["الطاعة","الرجوع","الأمانة"],
+story:[
+"ملاخي خدم في فترة كان فيها الشعب قد عاد من السبي، لكن المشاكل الروحية لم تنته.",
+"الناس كانت تقدم ذبائح، لكن كان في عدم احترام حقيقي للعبادة، والكهنة أنفسهم احتاجوا إلى مواجهة.",
+"ملاخي استخدم أسلوبًا مباشرًا في الحوار، وكان يكشف الفجوة بين الكلام والممارسة.",
+"وفي نفس الوقت، حمل رسائل عن مجيء الرب وعن يوم الدينونة وعن الذين يخافون اسم الرب.",
+"كان هدف الرسالة مش مجرد تخويف، لكن دعوة الشعب للرجوع والأمانة.",
+"وملاخي يختم أسفار العهد القديم برسائل تفتح الباب للانتظار والرجاء."
+],
+reflection:"ممكن الإنسان يعمل كل العادات الصح من الخارج، لكن السؤال الأهم: قلبه فين؟",
+lesson:"ملاخي يذكرنا إن علاقتنا بربنا مش مجرد عادات أو شكل خارجي، لكن أمانة قلب وحياة.",
+reference:"ملاخي 1–4"
+}
+
+];
+
+
+/* =========================================================
+   STATE
+   ========================================================= */
+
+let currentFilter = "الكل";
+
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+
+function renderStories(){
+
+    const grid = document.getElementById("charactersGrid");
+    const empty = document.getElementById("empty");
+    const searchValue =
+        document.getElementById("search").value.trim().toLowerCase();
+
+    let filtered = stories.filter(story => {
+
+        const matchesFilter =
+            currentFilter === "الكل" ||
+            story.category === currentFilter;
+
+        const searchable =
+            (
+                story.name +
+                " " +
+                story.hook +
+                " " +
+                story.topics.join(" ")
+            ).toLowerCase();
+
+        const matchesSearch =
+            searchable.includes(searchValue);
+
+        return matchesFilter && matchesSearch;
+    });
+
+    grid.innerHTML = "";
+
+    if(filtered.length === 0){
+
+        empty.style.display = "block";
+
+        return;
+    }
+
+    empty.style.display = "none";
+
+    filtered.forEach((story,index)=>{
+
+        const realNumber =
+            stories.findIndex(s => s.name === story.name) + 1;
+
+        const card = document.createElement("article");
+
+        card.className = "character";
+
+        card.onclick = () => openStory(story);
+
+        card.innerHTML = `
+            <div class="characterNumber">${realNumber}</div>
+
+            <div class="characterIcon">
+                ${story.icon}
+            </div>
+
+            <h3>${story.name}</h3>
+
+            <p class="hook">
+                ${story.hook}
+            </p>
+
+            <span class="readMore">
+                احكيلي قصته ←
+            </span>
+        `;
+
+        grid.appendChild(card);
+
+    });
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function searchStories(){
+    renderStories();
+}
+
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+function setFilter(filter,button){
+
+    currentFilter = filter;
+
+    document.querySelectorAll(".filter")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    renderStories();
+
+}
+
+
+/* =========================================================
+   TOPIC
+   ========================================================= */
+
+function filterByTopic(topic){
+
+    document.getElementById("characters")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    document.getElementById("search").value = topic;
+
+    currentFilter = "الكل";
+
+    document.querySelectorAll(".filter")
+        .forEach(btn => btn.classList.remove("active"));
+
+    document.querySelector(".filter").classList.add("active");
+
+    renderStories();
+}
+
+
+/* =========================================================
+   OPEN STORY
+   ========================================================= */
+
+function openStory(story){
+
+    const index =
+        stories.findIndex(s => s.name === story.name) + 1;
+
+    document.getElementById("modalNumber").textContent =
+        `شخصية رقم ${index} من ${stories.length}`;
+
+    document.getElementById("modalTitle").textContent =
+        story.name;
+
+    document.getElementById("modalHook").textContent =
+        story.hook;
+
+    document.getElementById("modalReflection").textContent =
+        story.reflection;
+
+    document.getElementById("modalLesson").textContent =
+        story.lesson;
+
+    document.getElementById("modalReference").textContent =
+        story.reference;
+
+    const storyContainer =
+        document.getElementById("modalStory");
+
+    storyContainer.innerHTML =
+        story.story
+        .map(paragraph => `<p>${paragraph}</p>`)
+        .join("");
+
+    document.getElementById("storyModal")
+        .classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================================
+   OPEN BY NAME
+   ========================================================= */
+
+function openByName(name){
+
+    const story =
+        stories.find(s => s.name === name);
+
+    if(story){
+        openStory(story);
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE
+   ========================================================= */
+
+function closeStory(){
+
+    document.getElementById("storyModal")
+        .classList.remove("show");
+
+    document.body.style.overflow = "";
+
+}
+
+
+function outsideClose(event){
+
+    if(event.target.id === "storyModal"){
+        closeStory();
+    }
+
+}
+
+
+document.addEventListener("keydown",event=>{
+
+    if(event.key === "Escape"){
+        closeStory();
+    }
+
+});
+
+
+/* =========================================================
+   OPTIONS
+   ========================================================= */
+
+function selectOption(button){
+
+    button.parentElement
+        .querySelectorAll(".option")
+        .forEach(option =>
+            option.classList.remove("selected")
+        );
+
+    button.classList.add("selected");
+
+}
+
+
+/* =========================================================
+   INITIAL LOAD
+   ========================================================= */
+
+renderStories();
+
+</script>
+
+</body>
+</html>
